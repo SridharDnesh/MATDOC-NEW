@@ -1,4 +1,6 @@
-        <div id="header" class="header section">
+      
+      
+      <div id="header" class="header section">
             <div class="header-top-section d-none d-lg-block">
                 <div class="container">
                     <div class="header-top-wrapper">
@@ -122,57 +124,9 @@
         <!-- Offcanvas End -->
 
 
-        @if (Auth::check() && Auth::user()->user_type!='admin')
             <div class="section bg-header" style="border-bottom: 1px solid #dddddd6b;">
                 <div class="container">
                     <div class="bg-custom-theme">
-                        @if(Auth::user()->customer->exam_type=='PG' && (isset(Auth::user()->payment->user_id)) && (Auth::user()->payment->plan_status == "success"))
-                        <ul class="navbar-navs list hor-swipe c-scrollbar-light">
-                            <li class="nav-item ">
-                                <a href="{{ route('home_user') }}" class="custom-link">Allotments</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ route('closing_rank') }}" class="custom-link">Closing Ranks </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ route('all_india_counselings') }}" class="custom-link">Seat Matrix</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ route('state_wise_counselings') }}" class="custom-link">Fee, Stipend and Bond</a>
-                            </li>
-                            <li class="nav-item">
-                            <a href="{{ route('ug.state_wise_counselings') }}" class="custom-link">Allotment Mapping</a>
-                            </li>
-                            <li class="nav-item">
-                            <a href="#" class="custom-link">Counsellings</a>
-                            </li>
-                            <li class="nav-item">
-                            <a href="#" class="custom-link">Universities</a>
-                            </li>
-                            <li class="nav-item">
-                            <a href="{{ route('college_list') }}" class="custom-link">Institutes</a>
-                            </li>
-                            <li class="nav-item">
-                            <a href="{{ route('course') }}" class="custom-link">Courses</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ route('deemed_details') }}" class="custom-link">Deemed Details</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ route('get_college_hospital') }}" class="custom-link">College Hospital
-                                    Details</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/dnb-beds" class="custom-link">DNB Hospital By Details</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ route('mark_vs_rank') }}" class="custom-link">College Hospital
-                                    Rank Predictor</a>
-                            </li>
-                        </ul>
-                        @endif
-
-                        @if(Auth::user()->customer->exam_type=='UG'  && (isset(Auth::user()->payment->user_id)) && (Auth::user()->payment->plan_status == "success"))
                         <ul class="navbar-navs list hor-swipe c-scrollbar-light">
                             <li class="nav-item ">
                                 <a href="{{ route('home_user') }}" class="custom-link">Allotments</a>
@@ -202,8 +156,6 @@
                             <a href="{{ route('course') }}" class="custom-link">Courses</a>
                             </li>
                         </ul>
-                        @endif
                     </div>
                 </div>
             </div>
-        @endif

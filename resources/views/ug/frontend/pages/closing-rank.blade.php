@@ -51,7 +51,7 @@
                         <!-- End State -->
                         <hr>
                         <div class="row" id="table">
-                          
+                        @include('ug.frontend.pages.closing-rank_table')
                         </div>
                      </div>
                   </div>
